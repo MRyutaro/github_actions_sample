@@ -8,3 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: echo "Hello World!"
+  say_bye:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Bye World!"
