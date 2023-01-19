@@ -9,11 +9,10 @@ env:
   LOCAL_BRANCH_NAME: gh-pages-local
 
 jobs:
-  say_hello:
+  add-new-file:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "Hello World!"
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
       - uses: actions/setup-python@v4
         with:
           python-version: '3.9'
@@ -34,6 +33,8 @@ jobs:
           git checkout $BASE_BRANCH_NAME
           git pull
           git checkout -b $LOCAL_BRANCH_NAME
+      - name: Add new file
+        run: python helloworld.py
       - name: Commit
         run: |
           git add .
