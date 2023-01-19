@@ -37,6 +37,7 @@ jobs:
         continue-on-error: true
         run: |
           git branch -d $LOCAL_BRANCH_NAME
+          git push --delete origin $LOCAL_BRANCH_NAME
       - name: Checkout
         run: |
           git fetch
