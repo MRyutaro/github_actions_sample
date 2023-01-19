@@ -43,7 +43,6 @@ jobs:
           git checkout $BASE_BRANCH_NAME
           git pull
           git checkout -b $LOCAL_BRANCH_NAME
-          git pull origin $LOCAL_BRANCH_NAME
       - name: Add new file
         run: python helloworld.py
       - name: Commit
