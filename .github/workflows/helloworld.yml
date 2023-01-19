@@ -47,6 +47,8 @@ jobs:
         run: python helloworld.py
       - name: Check branch
         run: git branch
+      - name: Pull
+        run: git pull origin $BASE_BRANCH_NAME
       - name: Commit
         run: |
           git add .
