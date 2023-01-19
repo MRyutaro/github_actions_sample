@@ -45,6 +45,8 @@ jobs:
           git checkout -b $LOCAL_BRANCH_NAME
       - name: Add new file
         run: python helloworld.py
+      - name: Check branch
+        run: git branch
       - name: Commit
         run: |
           git add .
