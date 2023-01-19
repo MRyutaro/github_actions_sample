@@ -36,7 +36,6 @@ jobs:
         # The reason why we don't use origin/gh-pages and just merge to it is, to prevent git complains gh-pages and the base branch have unrelated histories and conflicts on merge (it should never happen. idk why this happens)
         continue-on-error: true
         run: |
-          git branch -d $LOCAL_BRANCH_NAME
           git push --delete origin $LOCAL_BRANCH_NAME
       - name: Checkout
         run: |
